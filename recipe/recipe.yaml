@@ -3,7 +3,7 @@
 context:
   name: torchcodec
   version: "0.2.1"
-  build_number: 0
+  build_number: 1
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   string_prefix: ${{ cuda_build_string if cuda == "true" else "cpu_" }}
 
@@ -17,7 +17,7 @@ source:
 
 build:
   number: ${{ build_number }}
-  skip: 
+  skip:
     # PyTorch does not support cuda 11
     - cuda_compiler_version == "11.8"
     # Upstream does not support Windows at the moment https://github.com/pytorch/torchcodec/issues/522
@@ -123,7 +123,7 @@ about:
   license: BSD-3-Clause
   license_file:
     - LICENSE
-  summary: TorchCodec is a Python library for decoding videos into PyTorch tensors, on CPU and CUDA GPU. 
+  summary: TorchCodec is a Python library for decoding videos into PyTorch tensors, on CPU and CUDA GPU.
 
 extra:
   recipe-maintainers:
