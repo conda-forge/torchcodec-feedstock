@@ -24,6 +24,8 @@ docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 ffmpeg:
 - '7'
+libtorch:
+- '2.6'
 magma:
 - '2.9'
 nccl:
@@ -34,6 +36,8 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.12.* *_cpython
+pytorch:
+- '2.6'
 target_platform:
 - linux-aarch64
 zip_keys:
