@@ -69,10 +69,9 @@ outputs:
         # I_CONFIRM_THIS_IS_NOT_A_LICENSE_VIOLATION to the wheel build to confirm that we want indeed to link to conda-forge's
         # ffmpeg. At runtime the user can install either lgpl or gpl ffmpeg as preferred
         - ffmpeg * [build=lgpl_*]
-        # This explicit pinning is a workaround for the fact that torchcodec 0.2.1 requires torch 2.6, but the pinned version is still 2.5.1
-        - libtorch 2.6.*
+        - libtorch
         - libtorch * [build=${{ torch_proc_type }}*]
-        - pytorch 2.6.*
+        - pytorch
         - pytorch * [build=${{ torch_proc_type }}*]
     
         - if: cuda_compiler_version != "None"
