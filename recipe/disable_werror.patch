@@ -1,0 +1,39 @@
+diff --git a/setup.py b/setup.py
+index f1652176..28b0481b 100644
+--- a/setup.py
++++ b/setup.py
+@@ -112,6 +112,7 @@ def _build_all_extensions_with_cmake(self):
+         torch_dir = Path(torch.utils.cmake_prefix_path) / "Torch"
+         cmake_build_type = os.environ.get("CMAKE_BUILD_TYPE", "Release")
+         enable_cuda = os.environ.get("ENABLE_CUDA", "")
++        torchcodec_disable_compile_warning_as_error = os.environ.get("TORCHCODEC_DISABLE_COMPILE_WARNING_AS_ERROR", "OFF")
+         python_version = sys.version_info
+         cmake_args = [
+             f"-DCMAKE_INSTALL_PREFIX={self._install_prefix}",
+@@ -120,6 +121,7 @@ def _build_all_extensions_with_cmake(self):
+             f"-DCMAKE_BUILD_TYPE={cmake_build_type}",
+             f"-DPYTHON_VERSION={python_version.major}.{python_version.minor}",
+             f"-DENABLE_CUDA={enable_cuda}",
++            f"-DTORCHCODEC_DISABLE_COMPILE_WARNING_AS_ERROR={torchcodec_disable_compile_warning_as_error}"
+         ]
+ 
+         Path(self.build_temp).mkdir(parents=True, exist_ok=True)
+diff --git a/src/torchcodec/_core/CMakeLists.txt b/src/torchcodec/_core/CMakeLists.txt
+index c79f62f3..fd054fe0 100644
+--- a/src/torchcodec/_core/CMakeLists.txt
++++ b/src/torchcodec/_core/CMakeLists.txt
+@@ -8,7 +8,13 @@ find_package(pybind11 REQUIRED)
+ find_package(Torch REQUIRED)
+ find_package(Python3 ${PYTHON_VERSION} EXACT COMPONENTS Development)
+ 
+-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -Werror ${TORCH_CXX_FLAGS}")
++if(DEFINED TORCHCODEC_DISABLE_COMPILE_WARNING_AS_ERROR AND TORCHCODEC_DISABLE_COMPILE_WARNING_AS_ERROR)
++    set(TORCHCODEC_WERROR_OPTION "")
++else()
++    set(TORCHCODEC_WERROR_OPTION "-Werror")
++endif()
++
++set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic ${TORCHCODEC_WERROR_OPTION} ${TORCH_CXX_FLAGS}")
+ 
+ function(make_torchcodec_sublibrary
+     library_name

@@ -8,5 +8,8 @@ if not "%cuda_compiler_version%" == "None" (
 :: we do not have license violation due to linking a GPL project
 set I_CONFIRM_THIS_IS_NOT_A_LICENSE_VIOLATION=1
 
+:: We do not want to fail for warnings due to deprecation in recent versions of ffmpeg
+set TORCHCODEC_DISABLE_COMPILE_WARNING_AS_ERROR=1
+
 pip install . --no-deps --no-build-isolation -vv
 if %ERRORLEVEL% neq 0 exit 1

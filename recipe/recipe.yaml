@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 
 context:
-  version: "0.2.1"
-  build_number: 3
+  version: "0.3.0"
+  build_number: 0
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   string_prefix: ${{ cuda_build_string if cuda == "true" else "cpu_" }}
 
@@ -12,7 +12,9 @@ recipe:
 
 source:
   - url: https://github.com/pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: b142ef4fef1e9ddb6dde70dda6ac4d12a02a010065230468eadbf37478621927
+    sha256: f535f184f7abe2460d759df7157fa99b40a12ee5d6ffc2eb9155956b7cc209d8
+    patches:
+      - disable_werror.patch
 
 build:
   number: ${{ build_number }}
