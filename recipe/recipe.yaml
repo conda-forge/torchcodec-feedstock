@@ -21,6 +21,8 @@ build:
     - cuda_compiler_version == "11.8"
     # Upstream does not support Windows at the moment https://github.com/pytorch/torchcodec/issues/522
     - win
+    # Compilation with linux-aarch64 works, but the tests are not passing, see https://github.com/pytorch/torchcodec/issues/569
+    - linux and aarch64
   string: ${{ torch_proc_type }}_py${{ python | version_to_buildstring }}_h${{ hash }}_${{ build_number }}
 
 
