@@ -1,8 +1,8 @@
 diff --git a/test/decoders/CMakeLists.txt b/test/decoders/CMakeLists.txt
-index 988def93..606546a2 100644
---- a/test/CMakeLists.txt
-+++ b/test/CMakeLists.txt
-@@ -33,4 +33,4 @@ target_link_libraries(
+index 3350c92c5..a054de550 100644
+--- a/test/decoders/CMakeLists.txt
++++ b/test/decoders/CMakeLists.txt
+@@ -31,4 +31,4 @@ target_link_libraries(
  )
  
  include(GoogleTest)
