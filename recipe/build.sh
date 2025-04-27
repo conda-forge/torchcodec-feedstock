@@ -11,9 +11,7 @@ mkdir build_cxx_tests
 cd build_cxx_tests
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=1 $CMAKE_ARGS ..
 cmake --build . -- VERBOSE=1
-if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
 ctest --rerun-failed --output-on-failure
-fi
 cd ..
 
 # We explicitly depend on lgpl's variant of ffmpeg in the recipe.yaml to ensure that
