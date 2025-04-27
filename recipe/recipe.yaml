@@ -13,6 +13,8 @@ recipe:
 source:
   - url: https://github.com/pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
     sha256: b142ef4fef1e9ddb6dde70dda6ac4d12a02a010065230468eadbf37478621927
+    patches:
+      - increase_timeout.patch
 
 build:
   number: ${{ build_number }}
