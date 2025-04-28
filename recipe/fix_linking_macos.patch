@@ -7,7 +7,7 @@ index c79f62f3..96143bcf 100644
          ${pybind_ops_library_name}
          PUBLIC
 -        "-undefined dynamic_lookup"
-+        "LINKER:-undefined;dynamic_lookup"
++        "LINKER:-undefined,dynamic_lookup"
      )
  
      # Install all libraries.
