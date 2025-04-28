@@ -15,6 +15,7 @@ source:
     sha256: f535f184f7abe2460d759df7157fa99b40a12ee5d6ffc2eb9155956b7cc209d8
     patches:
       - remove_werror.patch
+      - fix_linking_macos.patch
 
 build:
   number: ${{ build_number }}
