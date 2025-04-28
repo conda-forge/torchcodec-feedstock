@@ -78,6 +78,7 @@ outputs:
         - libtorch * [build=${{ torch_proc_type }}*]
         - pytorch
         - pytorch * [build=${{ torch_proc_type }}*]
+        - pybind11
 
         - if: cuda_compiler_version != "None"
           then:
