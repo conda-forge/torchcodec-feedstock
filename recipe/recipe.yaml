@@ -78,6 +78,7 @@ outputs:
         - if: cuda_compiler_version != "None"
           then:
             # These are dev packages (headers etc.) for transitive dependencies of libtorch
+            - cuda-version ==${{ cuda_compiler_version }}
             - cuda-driver-dev
             - cuda-cudart-dev
             - cuda-nvrtc-dev
