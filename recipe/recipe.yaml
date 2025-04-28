@@ -60,7 +60,7 @@ outputs:
         - if: cuda_compiler_version != "None"
           then:
             - ${{ compiler('cuda') }}
-        - cmake 3.*
+        - cmake
         - pkg-config
         - make
 
