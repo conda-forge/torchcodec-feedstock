@@ -124,7 +124,6 @@ outputs:
             - pytest
             - numpy
             - pillow
-            - torchvision
         script:
           - pytest test
 
