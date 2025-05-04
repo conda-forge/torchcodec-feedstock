@@ -1,3 +1,9 @@
 # Keep aligned with https://github.com/conda-forge/pytorch-cpu-feedstock/blob/71a445e6b5a73c4d0afd3ca1b235684bfcfa0bce/recipe/conda_build_config.yaml#L1C1-L2C38
 c_stdlib_version:  # [osx and x86_64]
   - 10.15          # [osx and x86_64]
+
+libtorch: 
+  - 2.7
+
+pytorch:
+  - 2.7
