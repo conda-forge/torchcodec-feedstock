@@ -2,7 +2,7 @@
 
 context:
   version: "0.3.0"
-  build_number: 0
+  build_number: 1
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   string_prefix: ${{ cuda_build_string if cuda == "true" else "cpu_" }}
 
@@ -62,7 +62,7 @@ outputs:
         - cmake
         - pkg-config
         - make
-    
+
       host:
         - python
         - pip
@@ -77,7 +77,7 @@ outputs:
         - pytorch
         - pytorch * [build=${{ torch_proc_type }}*]
         - pybind11
-    
+
         - if: cuda_compiler_version != "None"
           then:
             # These are dev packages (headers etc.) for transitive dependencies of libtorch
@@ -129,7 +129,8 @@ outputs:
           # As long as the vast majority of test pass, it should be ok to just skip the few tests that do not pass
           - if: target_platform == "osx-64"
             then:
-              - pytest --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_at_eof[cpu] --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_if_seek_too_far[cpu] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset0] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset1] test
+              - pytest --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_at_eof[cpu] --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_if_seek_too_far[cpu] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset0] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset1]
+                test
             else:
               - pytest test
 
