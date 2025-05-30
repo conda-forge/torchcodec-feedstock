@@ -13,3 +13,5 @@ github:
 test: native_and_emulated
 remote_ci_setup:
   - rattler-build=0.41           # workaround for https://github.com/prefix-dev/rattler-build/issues/1701
+  - conda-forge-ci-setup=4
+  - conda-build>=24.1
