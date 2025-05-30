@@ -11,3 +11,5 @@ github:
   branch_name: main
   tooling_branch_name: main
 test: native_and_emulated
+remote_ci_setup:
+  - rattler-build=0.41           # workaround for https://github.com/prefix-dev/rattler-build/issues/1701
