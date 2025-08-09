@@ -15,7 +15,6 @@ source:
     sha256: 33890174c03ae321caf83f69f9b1835c151179687bfded28dae536cb7276b156
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
-      - remove_werror.patch
 
 build:
   number: ${{ build_number }}
