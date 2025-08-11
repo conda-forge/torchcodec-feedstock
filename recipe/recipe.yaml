@@ -12,10 +12,9 @@ recipe:
 
 source:
   - url: https://github.com/pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: f535f184f7abe2460d759df7157fa99b40a12ee5d6ffc2eb9155956b7cc209d8
+    sha256: 8037f1d95a72014b63e3303a7a0be0beee5645a04c7ccc4d5ea45c513b392038
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
-      - remove_werror.patch
 
 build:
   number: ${{ build_number }}
