@@ -15,6 +15,7 @@ source:
     sha256: 8037f1d95a72014b63e3303a7a0be0beee5645a04c7ccc4d5ea45c513b392038
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
+      - fix-ffmpeg-test.patch
 
 build:
   number: ${{ build_number }}
