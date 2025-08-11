@@ -1,0 +1,20 @@
+diff --git a/src/torchcodec/_core/CMakeLists.txt b/src/torchcodec/_core/CMakeLists.txt
+index 1e6d2ec8..e316870a 100644
+--- a/src/torchcodec/_core/CMakeLists.txt
++++ b/src/torchcodec/_core/CMakeLists.txt
+@@ -284,12 +284,12 @@ else()
+         )
+     endif()
+ 
+-    make_torchcodec_libraries(${ffmpeg_major_version} PkgConfig::LIBAV)
++    make_torchcodec_libraries("" PkgConfig::LIBAV)
+ 
+     # Expose these values updwards so that the test compilation does not need
+     # to re-figure it out. FIXME: it's not great that we just copy-paste the
+     # library names.
+-    set(libtorchcodec_library_name "libtorchcodec_core${ffmpeg_major_version}" PARENT_SCOPE)
+-    set(libtorchcodec_custom_ops_name "libtorchcodec_custom_ops${ffmpeg_major_version}" PARENT_SCOPE)
++    set(libtorchcodec_library_name "libtorchcodec_core" PARENT_SCOPE)
++    set(libtorchcodec_custom_ops_name "libtorchcodec_custom_ops" PARENT_SCOPE)
+     set(libav_include_dirs ${LIBAV_INCLUDE_DIRS} PARENT_SCOPE)
+ endif()
