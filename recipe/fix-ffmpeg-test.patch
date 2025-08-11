@@ -31,3 +31,15 @@ index 71b809d5..82c5b77c 100644
          pybind_ops_module_name = _get_pybind_ops_module_name(ffmpeg_major_version)
          decoder_library_name = f"libtorchcodec_core{ffmpeg_major_version}"
          custom_ops_library_name = f"libtorchcodec_custom_ops{ffmpeg_major_version}"
+diff --git a/setup.py b/setup.py
+index 59b5ef53..cb571fbb 100644
+--- a/setup.py
++++ b/setup.py
+@@ -123,6 +123,7 @@ def _build_all_extensions_with_cmake(self):
+             f"-DCMAKE_BUILD_TYPE={cmake_build_type}",
+             f"-DPYTHON_VERSION={python_version.major}.{python_version.minor}",
+             f"-DENABLE_CUDA={enable_cuda}",
++            "-DPYBIND_OPS_MODULE_NAME=core_pybind_ops"
+             f"-DTORCHCODEC_DISABLE_COMPILE_WARNING_AS_ERROR={torchcodec_disable_compile_warning_as_error}",
+         ]
+ 
