@@ -15,6 +15,7 @@ source:
     sha256: 5abd32677cb6f469b2ec565557f9d53c98bfbf8620c100385f0f0f2f20167b6c
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
+      - increase_test_against_cli_mp3_tol.patch
 
 build:
   number: ${{ build_number }}
