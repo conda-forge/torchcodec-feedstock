@@ -10,6 +10,8 @@ fi
 # we do not have license violation due to linking a GPL project
 export I_CONFIRM_THIS_IS_NOT_A_LICENSE_VIOLATION=1
 
+export TORCHCODEC_DISABLE_COMPILE_WARNING_AS_ERROR=ON
+
 pip install . --no-deps --no-build-isolation -vv
 
 # Remove spurious files created by gtk post-link activation script,

@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 
 context:
-  version: "0.3.0"
-  build_number: 1
+  version: "0.4.0"
+  build_number: 0
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   string_prefix: ${{ cuda_build_string if cuda == "true" else "cpu_" }}
 
@@ -12,11 +12,9 @@ recipe:
 
 source:
   - url: https://github.com/pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: f535f184f7abe2460d759df7157fa99b40a12ee5d6ffc2eb9155956b7cc209d8
+    sha256: 33890174c03ae321caf83f69f9b1835c151179687bfded28dae536cb7276b156
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
-      - 657.patch
-      - remove_werror.patch
 
 build:
   number: ${{ build_number }}
@@ -76,7 +74,8 @@ outputs:
         - libtorch * [build=${{ torch_proc_type }}*]
         - pytorch
         - pytorch * [build=${{ torch_proc_type }}*]
-        - pybind11
+        # Workaround for https://github.com/conda-forge/torchcodec-feedstock/pull/19#issuecomment-3195739288
+        - pybind11 <3
 
         - if: cuda_compiler_version != "None"
           then:
