@@ -1,0 +1,23 @@
+From ca0d6d0cc28a788cacb31ed9959557b9fb0d463d Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio@traversaro.it>
+Date: Mon, 18 Aug 2025 15:50:40 +0200
+Subject: [PATCH] Increase test_against_cli mp3 tol
+
+---
+ test/test_encoders.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/test/test_encoders.py b/test/test_encoders.py
+index b32f961f..390cabd7 100644
+--- a/test/test_encoders.py
++++ b/test/test_encoders.py
+@@ -292,7 +292,8 @@ def test_against_cli(
+             # tolerances, the check fails on ~1% of the samples, so that's
+             # probably fine. It might be that the FFmpeg CLI doesn't rely on
+             # libswresample for converting channels?
+-            rtol, atol = 0, 1e-3
++            # See also https://github.com/pytorch/torchcodec/issues/569#issuecomment-3197006256
++            rtol, atol = 0, 1e-2
+         else:
+             rtol, atol = None, None
+         samples_by_us = self.decode(encoded_by_us)
