@@ -74,7 +74,8 @@ outputs:
         - libtorch * [build=${{ torch_proc_type }}*]
         - pytorch
         - pytorch * [build=${{ torch_proc_type }}*]
-        - pybind11
+        # Workaround for https://github.com/conda-forge/torchcodec-feedstock/pull/19#issuecomment-3195739288
+        - pybind11 <3
 
         - if: cuda_compiler_version != "None"
           then:
