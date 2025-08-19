@@ -12,7 +12,7 @@ recipe:
 
 source:
   - url: https://github.com/NicolasHug/torchcodec/archive/2bdb64321a517db41110ed0b1fbdfe20161f2e17.zip
-    sha256: 5abd32677cb6f469b2ec565557f9d53c98bfbf8620c100385f0f0f2f20167b6c
+    sha256: 2703cc91d203147f1a89f42346d3defaa719e1b24fc9ae6361279dc78119d829
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
       - increase_test_against_cli_mp3_tol.patch
