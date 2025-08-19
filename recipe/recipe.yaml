@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 
 context:
-  version: "0.5.0"
+  version: "0.6.1000"
   build_number: 0
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   string_prefix: ${{ cuda_build_string if cuda == "true" else "cpu_" }}
@@ -11,7 +11,7 @@ recipe:
   version: ${{ version }}
 
 source:
-  - url: https://github.com/pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
+  - url: https://github.com/NicolasHug/torchcodec/archive/2bdb64321a517db41110ed0b1fbdfe20161f2e17.zip
     sha256: 5abd32677cb6f469b2ec565557f9d53c98bfbf8620c100385f0f0f2f20167b6c
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
@@ -22,8 +22,7 @@ build:
   skip:
     # PyTorch does not support cuda 11
     - cuda_compiler_version == "11.8"
-    # Upstream does not support Windows at the moment https://github.com/pytorch/torchcodec/issues/522
-    - win
+    - not win
   string: ${{ torch_proc_type }}_py${{ python | version_to_buildstring }}_h${{ hash }}_${{ build_number }}
 
 outputs:
