@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 
 context:
-  version: "0.5.0"
+  version: "0.6.0"
   build_number: 0
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   string_prefix: ${{ cuda_build_string if cuda == "true" else "cpu_" }}
@@ -12,7 +12,7 @@ recipe:
 
 source:
   - url: https://github.com/pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 5abd32677cb6f469b2ec565557f9d53c98bfbf8620c100385f0f0f2f20167b6c
+    sha256: 8037f1d95a72014b63e3303a7a0be0beee5645a04c7ccc4d5ea45c513b392038
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
       - increase_test_against_cli_mp3_tol.patch
