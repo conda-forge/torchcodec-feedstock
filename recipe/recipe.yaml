@@ -16,6 +16,7 @@ source:
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
       - increase_test_against_cli_mp3_tol.patch
+      - 833.patch
 
 build:
   number: ${{ build_number }}
