@@ -2,7 +2,7 @@
 
 context:
   version: "0.6.0"
-  build_number: 0
+  build_number: 1
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   string_prefix: ${{ cuda_build_string if cuda == "true" else "cpu_" }}
 
@@ -16,6 +16,7 @@ source:
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
       - increase_test_against_cli_mp3_tol.patch
+      - 833.patch
 
 build:
   number: ${{ build_number }}
@@ -75,9 +76,7 @@ outputs:
         - libtorch * [build=${{ torch_proc_type }}*]
         - pytorch
         - pytorch * [build=${{ torch_proc_type }}*]
-        # Workaround for https://github.com/conda-forge/torchcodec-feedstock/pull/19#issuecomment-3195739288
-        - pybind11 <3
-
+        - pybind11
         - if: cuda_compiler_version != "None"
           then:
             # These are dev packages (headers etc.) for transitive dependencies of libtorch
