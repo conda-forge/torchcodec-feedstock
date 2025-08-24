@@ -10,8 +10,8 @@ conda_forge_output_validation: true
 github:
   branch_name: main
   tooling_branch_name: main
-test: native_and_emulated
 remote_ci_setup:
-  - rattler-build=0.40           # workaround for https://github.com/prefix-dev/rattler-build/issues/1701 and https://github.com/conda-forge/admin-requests/pull/1517
-  - conda-forge-ci-setup=4
-  - conda-build>=24.1
+- rattler-build=0.40
+- conda-forge-ci-setup=4
+- conda-build>=24.1
+test: native_and_emulated

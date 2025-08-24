@@ -1,0 +1,36 @@
+From ba74d3b0da7d93b6aee7004a823aea91eef673bc Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio@traversaro.it>
+Date: Sun, 24 Aug 2025 16:28:56 +0200
+Subject: [PATCH] Minimal support for ffmpeg8
+
+---
+ src/torchcodec/_core/CMakeLists.txt | 2 ++
+ src/torchcodec/_core/ops.py         | 2 +-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/src/torchcodec/_core/CMakeLists.txt b/src/torchcodec/_core/CMakeLists.txt
+index 1e6d2ec80..0c51c7932 100644
+--- a/src/torchcodec/_core/CMakeLists.txt
++++ b/src/torchcodec/_core/CMakeLists.txt
+@@ -277,6 +277,8 @@ else()
+         set(ffmpeg_major_version "6")
+     elseif (${libavcodec_major_version} STREQUAL "61")
+         set(ffmpeg_major_version "7")
++    elseif (${libavcodec_major_version} STREQUAL "62")
++        set(ffmpeg_major_version "8")
+     else()
+         message(
+             FATAL_ERROR
+diff --git a/src/torchcodec/_core/ops.py b/src/torchcodec/_core/ops.py
+index 807ed265d..148054bbd 100644
+--- a/src/torchcodec/_core/ops.py
++++ b/src/torchcodec/_core/ops.py
+@@ -41,7 +41,7 @@ def load_torchcodec_shared_libraries():
+     #      libraries do not meet those conditions.
+ 
+     exceptions = []
+-    for ffmpeg_major_version in (7, 6, 5, 4):
++    for ffmpeg_major_version in (8, 7, 6, 5, 4):
+         pybind_ops_module_name = _get_pybind_ops_module_name(ffmpeg_major_version)
+         decoder_library_name = f"libtorchcodec_core{ffmpeg_major_version}"
+         custom_ops_library_name = f"libtorchcodec_custom_ops{ffmpeg_major_version}"
