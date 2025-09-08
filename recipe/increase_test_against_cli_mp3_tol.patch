@@ -1,32 +1,33 @@
-From 21b9b688ceb3ce2596fe7dc7064cdc44d62dfd69 Mon Sep 17 00:00:00 2001
+From c8ce547bea6461b3933a418c2c71b45b2049d939 Mon Sep 17 00:00:00 2001
 From: Silvio Traversaro <silvio@traversaro.it>
-Date: Mon, 18 Aug 2025 17:20:30 +0200
-Subject: [PATCH] Update test_encoders.py
+Date: Tue, 9 Sep 2025 17:14:46 +0200
+Subject: [PATCH] Import platform and adjust rtol for MP3 decoding
 
+Added platform import and conditional rtol override for MP3 on Linux ARM64.
 ---
- test/test_encoders.py | 6 ++++++
- 1 file changed, 6 insertions(+)
+ test/test_encoders.py | 5 +++++
+ 1 file changed, 5 insertions(+)
 
 diff --git a/test/test_encoders.py b/test/test_encoders.py
-index d432263a..c5b0208e 100644
+index f8b5b351..7d7a0271 100644
 --- a/test/test_encoders.py
 +++ b/test/test_encoders.py
-@@ -1,5 +1,6 @@
+@@ -1,6 +1,7 @@
+ import io
  import json
  import os
 +import platform
  import re
  import subprocess
  import sys
-@@ -279,6 +280,11 @@ def test_against_cli(
-             rtol, atol = 0, 1e-3
-         else:
-             rtol, atol = None, None
-+
+@@ -321,6 +322,10 @@ def test_against_cli(
+             # TODO: https://github.com/pytorch/torchcodec/issues/837
+             return
+ 
 +        # Override rtol only for MP3 on Linux ARM64, see https://github.com/pytorch/torchcodec/issues/569#issuecomment-3197006256
 +        if format == "mp3" and sys.platform == "linux" and platform.machine() == "aarch64":
 +            rtol, atol = 0, 1e-2
 +
          samples_by_us = self.decode(encoded_by_us)
          samples_by_ffmpeg = self.decode(encoded_by_ffmpeg)
-         assert_close(
+ 
