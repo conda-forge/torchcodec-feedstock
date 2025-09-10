@@ -1,0 +1,28 @@
+From 1cf6403045854cc9aa78a20ec062a9e284e4c9a1 Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio@traversaro.it>
+Date: Tue, 9 Sep 2025 15:35:26 +0200
+Subject: [PATCH] Remove IS_WINDOWS import and redefine it
+
+---
+ test/test_encoders.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/test/test_encoders.py b/test/test_encoders.py
+index f8b5b351..5f7e932b 100644
+--- a/test/test_encoders.py
++++ b/test/test_encoders.py
+@@ -17,12 +17,13 @@
+     assert_tensor_close_on_at_least,
+     get_ffmpeg_major_version,
+     in_fbcode,
+-    IS_WINDOWS,
+     NASA_AUDIO_MP3,
+     SINE_MONO_S32,
+     TestContainerFile,
+ )
+ 
++IS_WINDOWS = False
++
+ 
+ @pytest.fixture
+ def with_ffmpeg_debug_logs():
