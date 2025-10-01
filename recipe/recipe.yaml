@@ -96,7 +96,7 @@ outputs:
             - libcurand-dev
             - libcusolver-dev
             - libcusparse-dev
-            - magma
+            - libmagma-devel
             - nvtx-c
             # These are actual torchcodec deps
             - libnpp-dev
