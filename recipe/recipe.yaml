@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 
 context:
-  version: "0.7.0"
+  version: "0.8.0"
   build_number: 0
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   string_prefix: ${{ cuda_build_string if cuda == "true" else "cpu_" }}
@@ -12,13 +12,13 @@ recipe:
 
 source:
   - url: https://github.com/pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: bc7f56347ca267b7b762aaa0f27422cea3e6f8ba7be7d4679ec78e49e39d9ed9
+    sha256: cb462e06534aa4b7a06f4d0fa6b0a17847167960ca35203d758567df878cf394
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
       - increase_test_against_cli_mp3_tol.patch
       - remove_windows_workaround_nasa_mp3.patch
       - if: win
-        then: 
+        then:
           - use_correct_python_on_windows.patch
 
 build:
@@ -69,7 +69,7 @@ outputs:
         - pip
         - setuptools
         - ffmpeg
-        # During the build, we link against the lgpl version of ffmpeg, to avoid license violation (and so we pass 
+        # During the build, we link against the lgpl version of ffmpeg, to avoid license violation (and so we pass
         # I_CONFIRM_THIS_IS_NOT_A_LICENSE_VIOLATION to the wheel build to confirm that we want indeed to link to conda-forge's
         # ffmpeg. At runtime the user can install either lgpl or gpl ffmpeg as preferred
         - ffmpeg * [build=lgpl_*]
@@ -113,8 +113,14 @@ outputs:
   - package:
       name: torchcodec-tests
     build:
-      script: ${{ 'true' if unix else 'exit /b 0' }}
+      # On Windows we run a script to transform the symlinked test files in
+      # actual copied files, as symlinks are not well supported on Windows
+      script:
+        file: remove_symlinks_from_test_on_windows.py
     requirements:
+      build:
+        # To run the remove_symlinks_from_test_on_windows.py script
+        - python
       run:
         - ${{ pin_subpackage('torchcodec', exact=True) }}
     tests:
