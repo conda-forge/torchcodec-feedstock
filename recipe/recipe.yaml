@@ -69,7 +69,7 @@ outputs:
         - pip
         - setuptools
         - ffmpeg
-        # During the build, we link against the lgpl version of ffmpeg, to avoid license violation (and so we pass 
+        # During the build, we link against the lgpl version of ffmpeg, to avoid license violation (and so we pass
         # I_CONFIRM_THIS_IS_NOT_A_LICENSE_VIOLATION to the wheel build to confirm that we want indeed to link to conda-forge's
         # ffmpeg. At runtime the user can install either lgpl or gpl ffmpeg as preferred
         - ffmpeg * [build=lgpl_*]
@@ -113,8 +113,14 @@ outputs:
   - package:
       name: torchcodec-tests
     build:
-      script: ${{ 'true' if unix else 'exit /b 0' }}
+      # On Windows we run a script to transform the symlinked test files in
+      # actual copied files, as symlinks are not well supported on Windows
+      script:
+        file: remove_symlinks_from_test_on_windows.py
     requirements:
+      build:
+        # To run the remove_symlinks_from_test_on_windows.py script
+        - python
       run:
         - ${{ pin_subpackage('torchcodec', exact=True) }}
     tests:
