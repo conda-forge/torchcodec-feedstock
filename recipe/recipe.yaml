@@ -115,7 +115,12 @@ outputs:
       # On Windows we run a script to transform the symlinked test files in
       # actual copied files, as symlinks are not well supported on Windows
       script:
-        - python remove_symlinks_from_test_on_windows.py
+        - if: unix
+          then:
+            - python $RECIPE_DIR/remove_symlinks_from_test_on_windows.py
+        - if: win
+          then:
+            - python %RECIPE_DIR%\\remove_symlinks_from_test_on_windows.py
     requirements:
       build:
         # To run the remove_symlinks_from_test_on_windows.py script
