@@ -132,6 +132,7 @@ outputs:
             - pytest
             - numpy
             - pillow
+            - torchvision
         script:
           # osx-64 (macOS on Intel) is not explicitly supported by torchcodec, see https://github.com/conda-forge/torchcodec-feedstock/pull/11
           # As long as the vast majority of test pass, it should be ok to just skip the few tests that do not pass
