@@ -2,7 +2,7 @@
 
 context:
   version: "0.8.1"
-  build_number: 0
+  build_number: 1
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   string_prefix: ${{ cuda_build_string if cuda == "true" else "cpu_" }}
 
@@ -143,8 +143,8 @@ outputs:
           # As long as the vast majority of test pass, it should be ok to just skip the few tests that do not pass
           - if: target_platform == "osx-64"
             then:
-              - pytest --deselect test/test_encoders.py --deselect test/test_ops.py::TestVideoEncoderOps::test_against_to_file --deselect test/test_ops.py::TestVideoEncoderOps::test_video_encoder_round_trip --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_at_eof[cpu] --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_if_seek_too_far[cpu] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset0] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset1]
-                test
+              - pytest --deselect test/test_encoders.py --deselect test/test_ops.py::TestVideoEncoderOps::test_against_to_file --deselect test/test_ops.py::TestVideoEncoderOps::test_video_encoder_round_trip --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_at_eof[cpu] --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_if_seek_too_far[cpu]
+                --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset0] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset1] test
             else:
               - pytest test
 
