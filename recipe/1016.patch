@@ -1,0 +1,41 @@
+From a9f9a05765ad5b0997036ab238429e0335b78fff Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio@traversaro.it>
+Date: Sat, 1 Nov 2025 08:55:17 +0100
+Subject: [PATCH] Skip tests that require ffmpeg built with libvpx support also
+ on Win with ffmpeg 8
+
+---
+ test/test_ops.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/test/test_ops.py b/test/test_ops.py
+index e798a7a2b..6dc38cfce 100644
+--- a/test/test_ops.py
++++ b/test/test_ops.py
+@@ -1169,7 +1169,7 @@ def test_video_encoder_round_trip(self, tmp_path, format, method):
+                 f"FFmpeg6 defaults to lossy encoding for {format}, skipping round-trip test."
+             )
+         if format == "webm" and (
+-            ffmpeg_version == 4 or (IS_WINDOWS and ffmpeg_version in (6, 7))
++            ffmpeg_version == 4 or (IS_WINDOWS and ffmpeg_version in (6, 7, 8))
+         ):
+             pytest.skip("Codec for webm is not available in this FFmpeg installation.")
+         source_frames = self.decode(TEST_SRC_2_720P.path).data
+@@ -1234,7 +1234,7 @@ def test_against_to_file(self, tmp_path, format, method):
+         # Test that to_file, to_tensor, and to_file_like produce the same results
+         ffmpeg_version = get_ffmpeg_major_version()
+         if format == "webm" and (
+-            ffmpeg_version == 4 or (IS_WINDOWS and ffmpeg_version in (6, 7))
++            ffmpeg_version == 4 or (IS_WINDOWS and ffmpeg_version in (6, 7, 8))
+         ):
+             pytest.skip("Codec for webm is not available in this FFmpeg installation.")
+ 
+@@ -1281,7 +1281,7 @@ def test_against_to_file(self, tmp_path, format, method):
+     def test_video_encoder_against_ffmpeg_cli(self, tmp_path, format):
+         ffmpeg_version = get_ffmpeg_major_version()
+         if format == "webm" and (
+-            ffmpeg_version == 4 or (IS_WINDOWS and ffmpeg_version in (6, 7))
++            ffmpeg_version == 4 or (IS_WINDOWS and ffmpeg_version in (6, 7, 8))
+         ):
+             pytest.skip("Codec for webm is not available in this FFmpeg installation.")
+ 
