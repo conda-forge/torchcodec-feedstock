@@ -23,7 +23,7 @@ docker_image:
 ffmpeg:
 - '8'
 libtorch:
-- '2.7'
+- '2.8'
 magma:
 - '2.9'
 nccl:
@@ -35,7 +35,7 @@ pin_run_as_build:
 python:
 - 3.13.* *_cp313
 pytorch:
-- '2.7'
+- '2.8'
 target_platform:
 - linux-aarch64
 zip_keys:
