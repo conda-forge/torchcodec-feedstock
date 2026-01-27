@@ -3,7 +3,7 @@ About torchcodec-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/torchcodec-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/pytorch/torchcodec
+Home: https://github.com/meta-pytorch/torchcodec
 
 Package license: BSD-3-Clause
 
