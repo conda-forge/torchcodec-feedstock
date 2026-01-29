@@ -11,7 +11,7 @@ recipe:
   version: ${{ version }}
 
 source:
-  - url: https://github.com/pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
+  - url: https://github.com/pytorch/meta-pytorch/archive/refs/tags/v${{ version }}.tar.gz
     sha256: 86e2d8919fecf8f7c171057a120acce721d059f1625f45cdd6cf88b0035cbd52
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
@@ -150,7 +150,7 @@ outputs:
               - pytest test
 
 about:
-  homepage: https://github.com/pytorch/torchcodec
+  homepage: https://github.com/meta-pytorch/torchcodec
   license: BSD-3-Clause
   license_file:
     - LICENSE
