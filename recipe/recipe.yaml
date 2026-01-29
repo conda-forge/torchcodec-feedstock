@@ -12,7 +12,7 @@ recipe:
 
 source:
   - url: https://github.com/pytorch/meta-pytorch/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 86e2d8919fecf8f7c171057a120acce721d059f1625f45cdd6cf88b0035cbd52
+    sha256: 8f7c171057a120acce721d059f1625f45cdd6cf88b0035cbd52
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
       - increase_test_against_cli_mp3_tol.patch
