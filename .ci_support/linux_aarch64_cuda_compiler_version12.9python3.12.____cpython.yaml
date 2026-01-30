@@ -1,7 +1,7 @@
 c_compiler:
 - gcc
 c_compiler_version:
-- '14'
+- '13'
 c_stdlib:
 - sysroot
 c_stdlib_version:
@@ -17,13 +17,13 @@ cuda_compiler_version:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '14'
+- '13'
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 ffmpeg:
 - '8'
 libtorch:
-- '2.9'
+- '2.10'
 magma:
 - '2.9'
 nccl:
@@ -35,7 +35,7 @@ pin_run_as_build:
 python:
 - 3.12.* *_cpython
 pytorch:
-- '2.9'
+- '2.10'
 target_platform:
 - linux-aarch64
 zip_keys:
