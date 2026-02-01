@@ -14,6 +14,8 @@ cxx_compiler:
 - vs2022
 ffmpeg:
 - '8'
+libmagma_devel:
+- '2.9'
 libtorch:
 - '2.10'
 magma:
