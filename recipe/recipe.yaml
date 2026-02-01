@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 
 context:
-  version: "0.8.1"
-  build_number: 4
+  version: "0.9.1"
+  build_number: 0
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   string_prefix: ${{ cuda_build_string if cuda == "true" else "cpu_" }}
 
@@ -12,11 +12,11 @@ recipe:
 
 source:
   - url: https://github.com/meta-pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 86e2d8919fecf8f7c171057a120acce721d059f1625f45cdd6cf88b0035cbd52
+    sha256: 115e14811c01c49efe6d4a69224e73670961eddfdab7067b16122fa2352eb219
     patches:
       - use_strict_threshold_only_for_linux_x86_64.patch
       - increase_test_against_cli_mp3_tol.patch
-      - 1016.patch
+      - skip_win_vpx_tests_in_ffmpeg8.patch
       - if: win
         then:
           - use_correct_python_on_windows.patch
@@ -96,7 +96,10 @@ outputs:
             - libcurand-dev
             - libcusolver-dev
             - libcusparse-dev
-            - magma
+            - if: cuda_compiler_version != "12.8"
+              then: libmagma-devel
+            - if: cuda_compiler_version == "12.8"
+              then: magma  # cannot (yet) use libmagma-devel due to https://github.com/conda-forge/libmagma-feedstock/issues/32
             - nvtx-c
             # These are actual torchcodec deps
             - libnpp-dev
