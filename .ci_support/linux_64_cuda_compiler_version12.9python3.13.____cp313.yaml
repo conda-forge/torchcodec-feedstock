@@ -26,8 +26,6 @@ libmagma_devel:
 - '2.9'
 libtorch:
 - '2.10'
-magma:
-- '2.9'
 nccl:
 - '2'
 pin_run_as_build:
