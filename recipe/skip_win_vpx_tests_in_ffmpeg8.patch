@@ -11,30 +11,30 @@ diff --git a/test/test_encoders.py b/test/test_encoders.py
 index fef19ac99..e3cae6d2d 100644
 --- a/test/test_encoders.py
 +++ b/test/test_encoders.py
-@@ -881,7 +881,7 @@ def encode_to_tensor(frames):
-                     pytest.mark.slow,
-                     pytest.mark.skipif(
-                         get_ffmpeg_major_version() == 4
+@@ -937,7 +937,7 @@ def encode_to_tensor(frames):
+                    pytest.mark.slow,
+                    pytest.mark.skipif(
+                        get_ffmpeg_major_version() == 4
 -                        or (IS_WINDOWS and get_ffmpeg_major_version() in (6, 7)),
 +                        or (IS_WINDOWS and get_ffmpeg_major_version() >= 6),
-                         reason="Codec for webm is not available in this FFmpeg installation.",
-                     ),
-                 ],
-@@ -936,7 +936,7 @@ def test_round_trip(self, tmp_path, format, method):
-                     pytest.mark.slow,
-                     pytest.mark.skipif(
-                         get_ffmpeg_major_version() == 4
+                        reason="Codec for webm is not available in this FFmpeg installation.",
+                    ),
+                ],
+@@ -992,7 +992,7 @@ def test_round_trip(self, tmp_path, format, method):
+                    pytest.mark.slow,
+                    pytest.mark.skipif(
+                        get_ffmpeg_major_version() == 4
 -                        or (IS_WINDOWS and get_ffmpeg_major_version() in (6, 7)),
 +                        or (IS_WINDOWS and get_ffmpeg_major_version() >= 6),
-                         reason="Codec for webm is not available in this FFmpeg installation.",
-                     ),
-                 ],
-@@ -994,7 +994,7 @@ def test_video_encoder_against_ffmpeg_cli(
-     ):
-         ffmpeg_version = get_ffmpeg_major_version()
-         if format == "webm" and (
--            ffmpeg_version == 4 or (IS_WINDOWS and ffmpeg_version in (6, 7))
-+            ffmpeg_version == 4 or (IS_WINDOWS and ffmpeg_version >= 6)
-         ):
-             pytest.skip("Codec for webm is not available in this FFmpeg installation.")
- 
+                        reason="Codec for webm is not available in this FFmpeg installation.",
+                    ),
+                ],
+@@ -1037,7 +1037,7 @@ def test_against_to_file(self, tmp_path, format, method):
+                    pytest.mark.slow,
+                    pytest.mark.skipif(
+                        get_ffmpeg_major_version() == 4
+-                        or (IS_WINDOWS and get_ffmpeg_major_version() in (6, 7)),
++                        or (IS_WINDOWS and get_ffmpeg_major_version() >= 6),
+                        reason="Codec for webm is not available in this FFmpeg installation.",
+                    ),
+                ],
