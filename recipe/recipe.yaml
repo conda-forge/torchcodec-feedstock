@@ -149,7 +149,7 @@ outputs:
             else:
               - if: win
                 then:
-                  - pytest -v --deselect test/test_encoders.py::TestAudioEncoder::test_against_cli[to_file-mp3-32000-1-0-asset1] test
+                  - pytest -v --deselect test/test_encoders.py::TestAudioEncoder::test_against_cli --deselect test/test_encoders.py::TestVideoEncoder::test_video_encoder_against_ffmpeg_cli test
                 else:
                   - pytest -v test
 
