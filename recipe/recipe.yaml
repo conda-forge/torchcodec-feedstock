@@ -4,7 +4,6 @@ context:
   version: "0.10.0"
   build_number: 0
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
-  string_prefix: ${{ cuda_build_string if cuda == "true" else "cpu_" }}
 
 recipe:
   name: torchcodec-split
