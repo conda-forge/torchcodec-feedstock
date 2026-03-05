@@ -5,7 +5,7 @@ context:
   build_number: 0
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   # ensure arm_variant_type gets detected as a used variable
-  touch_arm_variant_type: ${{ arm_variant_type if (linux and aarch64 and cuda_compiler_version != "None") else "None" }}
+  touch_arm_variant_type: ${{ arm_variant_type | default("None") }}
 
 recipe:
   name: torchcodec-split
@@ -61,7 +61,7 @@ outputs:
             - ${{ compiler('cuda') }}
         - if: cuda_compiler_version != "None" and linux and aarch64
           then:
-            - arm-variant * ${{ arm_variant_type }}
+            - arm-variant * ${{ arm_variant_type | default("None") }}
         - cmake
         - pkgconf
         - ninja
