@@ -1,8 +1,8 @@
 azure:
   free_disk_space: true
-build_platform:
-  linux_aarch64: linux_64
-  osx_arm64: osx_64
+provider:
+  linux_aarch64: default
+  osx_arm64: default
 conda_build:
   error_overlinking: true
 conda_build_tool: rattler-build
@@ -14,4 +14,4 @@ github:
 test: native_and_emulated
 bot:
   version_updates:
-    allowed_tag_globs: 'v*'
+    allowed_tag_globs: "v*"
