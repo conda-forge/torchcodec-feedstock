@@ -15,7 +15,6 @@ source:
   - url: https://github.com/meta-pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
     sha256: 86d2b65634a31fc64caf0c6492c392e16296aae2e9f41c2d4be33bf267c088d4
     patches:
-      - skip_win_vpx_tests_in_ffmpeg8.patch
       - if: win
         then:
           - use_correct_python_on_windows.patch
