@@ -97,9 +97,7 @@ outputs:
             - libcurand-dev
             - libcusolver-dev
             - libcusparse-dev
-            - if: cuda_compiler_version != "12.8"
-              then: libmagma-devel
-              else: magma
+            - libmagma-devel
             - nvtx-c
             # These are actual torchcodec deps
             - libnpp-dev
