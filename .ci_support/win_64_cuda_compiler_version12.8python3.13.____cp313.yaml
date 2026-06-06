@@ -15,11 +15,9 @@ cxx_compiler:
 ffmpeg:
 - '8'
 libmagma_devel:
-- '2.9'
+- 2.10.0
 libtorch:
 - '2.10'
-magma:
-- '2.9'
 pin_run_as_build:
   python:
     min_pin: x.x

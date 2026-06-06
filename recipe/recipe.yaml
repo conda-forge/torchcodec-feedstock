@@ -2,7 +2,7 @@
 
 context:
   version: "0.10.0"
-  build_number: 1
+  build_number: 2
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   # ensure arm_variant_type gets detected as a used variable
   touch_arm_variant_type: ${{ arm_variant_type | default("None") }}
@@ -18,6 +18,7 @@ source:
       - if: win
         then:
           - use_correct_python_on_windows.patch
+          - skip_win_vpx_tests_in_ffmpeg8.patch
 
 build:
   number: ${{ build_number }}
@@ -97,10 +98,7 @@ outputs:
             - libcurand-dev
             - libcusolver-dev
             - libcusparse-dev
-            - if: cuda_compiler_version != "12.8"
-              then: libmagma-devel
-            - if: cuda_compiler_version == "12.8"
-              then: magma  # cannot (yet) use libmagma-devel due to https://github.com/conda-forge/libmagma-feedstock/issues/32
+            - libmagma-devel
             - nvtx-c
             # These are actual torchcodec deps
             - libnpp-dev
@@ -148,8 +146,8 @@ outputs:
           # As long as the vast majority of test pass, it should be ok to just skip the few tests that do not pass
           - if: target_platform == "osx-64"
             then:
-              - pytest -v --deselect test/test_encoders.py --deselect test/test_ops.py::TestVideoEncoderOps::test_against_to_file --deselect test/test_ops.py::TestVideoEncoderOps::test_video_encoder_round_trip --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_at_eof[cpu] --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_if_seek_too_far[cpu]
-                --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset0] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset1] --deselect test/test_transform_ops.py::TestPublicVideoDecoderTransformOps test
+              - pytest -v --deselect test/test_encoders.py --deselect test/test_ops.py::TestVideoEncoderOps::test_against_to_file --deselect test/test_ops.py::TestVideoEncoderOps::test_video_encoder_round_trip --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_at_eof[cpu] --deselect 
+                test/test_ops.py::TestVideoDecoderOps::test_throws_exception_if_seek_too_far[cpu] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset0] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset1] --deselect test/test_transform_ops.py::TestPublicVideoDecoderTransformOps test
             else:
               - if: build_platform != target_platform
                 then:
