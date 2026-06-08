@@ -27,7 +27,7 @@ ffmpeg:
 libmagma_devel:
 - 2.10.0
 libtorch:
-- '2.10'
+- '2.11'
 nccl:
 - '2'
 pin_run_as_build:
@@ -37,7 +37,7 @@ pin_run_as_build:
 python:
 - 3.14.* *_cp314
 pytorch:
-- '2.10'
+- '2.11'
 target_platform:
 - linux-aarch64
 zip_keys:

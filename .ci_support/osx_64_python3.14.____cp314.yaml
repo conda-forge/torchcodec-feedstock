@@ -23,7 +23,7 @@ cxx_compiler_version:
 ffmpeg:
 - '8'
 libtorch:
-- '2.10'
+- '2.11'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pin_run_as_build:
@@ -33,7 +33,7 @@ pin_run_as_build:
 python:
 - 3.14.* *_cp314
 pytorch:
-- '2.10'
+- '2.11'
 target_platform:
 - osx-64
 zip_keys:
