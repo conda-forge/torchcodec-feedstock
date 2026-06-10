@@ -139,6 +139,11 @@ outputs:
             - numpy
             - pillow
             - torchvision
+            # Required by third-party-interface tests
+            - cmake
+            - pkg-config
+            - ${{ compiler('cxx') }}
+            - ${{ compiler('c') }}
         script:
           # osx-64 (macOS on Intel) is not explicitly supported by torchcodec, see https://github.com/conda-forge/torchcodec-feedstock/pull/11
           # and https://github.com/conda-forge/torchcodec-feedstock/pull/38#issuecomment-3456998748
