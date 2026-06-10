@@ -18,7 +18,6 @@ source:
       - if: win
         then:
           - use_correct_python_on_windows.patch
-          - skip_win_vpx_tests_in_ffmpeg8.patch
 
 build:
   number: ${{ build_number }}
