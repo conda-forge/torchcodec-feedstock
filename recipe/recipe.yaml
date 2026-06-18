@@ -144,9 +144,7 @@ outputs:
             - pkg-config
             - ${{ compiler('cxx') }}
             - ${{ compiler('c') }}
-            - if: win
-              then:
-                - make
+            - make
         script:
           # osx-64 (macOS on Intel) is not explicitly supported by torchcodec, see https://github.com/conda-forge/torchcodec-feedstock/pull/11
           # and https://github.com/conda-forge/torchcodec-feedstock/pull/38#issuecomment-3456998748
