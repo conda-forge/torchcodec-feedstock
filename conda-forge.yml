@@ -13,3 +13,5 @@ test: native_and_emulated
 bot:
   version_updates:
     allowed_tag_globs: "v*"
+workflow_settings:
+  free_disk_space: max
