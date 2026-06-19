@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 
 context:
-  version: "0.11.0"
+  version: "0.11.1"
   build_number: 0
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   # ensure arm_variant_type gets detected as a used variable
@@ -13,7 +13,7 @@ recipe:
 
 source:
   - url: https://github.com/meta-pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 86d2b65634a31fc64caf0c6492c392e16296aae2e9f41c2d4be33bf267c088d4
+    sha256: df0fbc3a1115f55cfcba0d8b241569354ade1deb6e180dcf8631f4c57853bcdf
     patches:
       - fix_third_party_interface_library_loading.patch
       - if: win
