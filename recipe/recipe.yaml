@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 
 context:
-  version: "0.10.0"
-  build_number: 3
+  version: "0.11.0"
+  build_number: 0
   torch_proc_type: ${{ "cuda" ~ cuda_compiler_version | version_to_buildstring if cuda_compiler_version != "None" else "cpu" }}
   # ensure arm_variant_type gets detected as a used variable
   touch_arm_variant_type: ${{ arm_variant_type | default("None") }}
@@ -13,12 +13,12 @@ recipe:
 
 source:
   - url: https://github.com/meta-pytorch/torchcodec/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: a970d3dd51f65ee12898397e54079bcd19c9d498cddfb661379721cfcc2c36e2
+    sha256: 86d2b65634a31fc64caf0c6492c392e16296aae2e9f41c2d4be33bf267c088d4
     patches:
+      - fix_third_party_interface_library_loading.patch
       - if: win
         then:
           - use_correct_python_on_windows.patch
-          - skip_win_vpx_tests_in_ffmpeg8.patch
 
 build:
   number: ${{ build_number }}
@@ -76,9 +76,16 @@ outputs:
         # ffmpeg. At runtime the user can install either lgpl or gpl ffmpeg as preferred
         - ffmpeg * [build=lgpl_*]
         - libtorch
-        - libtorch * [build=${{ torch_proc_type }}*]
         - pytorch
-        - pytorch * [build=${{ torch_proc_type }}*]
+        # We temporary relatex the pytorch dependency on to be compatible with torchvision,
+        # see https://github.com/conda-forge/torchcodec-feedstock/pull/69#issuecomment-4751807811
+        - if: cuda_compiler_version == "12.9" and win
+          then:
+            - libtorch * [build=cuda12*]
+            - pytorch * [build=cuda12*]
+          else:
+            - libtorch * [build=${{ torch_proc_type }}*]
+            - pytorch * [build=${{ torch_proc_type }}*]
         - pybind11
         - if: cuda_compiler_version != "None"
           then:
@@ -104,7 +111,13 @@ outputs:
             - libnpp-dev
       run:
         - python
-        - pytorch * [build=${{ torch_proc_type }}*]
+        # We temporary relatex the pytorch dependency on to be compatible with torchvision,
+        # see https://github.com/conda-forge/torchcodec-feedstock/pull/69#issuecomment-4751807811
+        - if: cuda_compiler_version == "12.9" and win
+          then:
+            - pytorch * [build=cuda12*]
+          else:
+            - pytorch * [build=${{ torch_proc_type }}*]
 
     tests:
       - python:
@@ -140,25 +153,77 @@ outputs:
             - numpy
             - pillow
             - torchvision
+            # Required by third-party-interface tests
+            - cmake
+            - pkg-config
+            - ${{ compiler('cxx') }}
+            - ${{ compiler('c') }}
+            - make
+            - if: cuda_compiler_version != "None"
+              then:
+                - ${{ compiler('cuda') }}
+                - cuda-version ==${{ cuda_compiler_version }}
+                - cuda-nvrtc-dev
+                - libcublas-dev
         script:
-          # osx-64 (macOS on Intel) is not explicitly supported by torchcodec, see https://github.com/conda-forge/torchcodec-feedstock/pull/11
-          # and https://github.com/conda-forge/torchcodec-feedstock/pull/38#issuecomment-3456998748
-          # As long as the vast majority of test pass, it should be ok to just skip the few tests that do not pass
-          - if: target_platform == "osx-64"
-            then:
-              - pytest -v --deselect test/test_encoders.py --deselect test/test_ops.py::TestVideoEncoderOps::test_against_to_file --deselect test/test_ops.py::TestVideoEncoderOps::test_video_encoder_round_trip --deselect test/test_ops.py::TestVideoDecoderOps::test_throws_exception_at_eof[cpu] --deselect 
-                test/test_ops.py::TestVideoDecoderOps::test_throws_exception_if_seek_too_far[cpu] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset0] --deselect test/test_ops.py::TestAudioDecoderOps::test_next[asset1] --deselect test/test_transform_ops.py::TestPublicVideoDecoderTransformOps test
-            else:
-              - if: build_platform != target_platform
-                then:
-                  # Cross-compiled test runs are often executed in emulation in CI, so run a reduced smoke suite.
-                  - pytest -v --durations=50 test/test_version.py test/test_frame_dataclasses.py test/test_metadata.py test/test_decoders.py
-                else:
-                  - if: win
-                    then:
-                      - pytest -v --deselect test/test_encoders.py::TestAudioEncoder::test_against_cli --deselect test/test_encoders.py::TestVideoEncoder::test_video_encoder_against_ffmpeg_cli test
-                    else:
-                      - pytest -v test
+          interpreter: python
+          content:
+            - import subprocess
+            - import sys
+            - tests_to_skip = []
+            - test_paths = ["test"]
+            - pytest_extra_args = []
+            - if: build_platform != target_platform
+              then:
+                # Cross-compiled test runs are often executed in emulation in CI, so run a reduced smoke suite.
+                - |
+                  test_paths = [
+                      "test/test_version.py",
+                      "test/test_frame_dataclasses.py",
+                      "test/test_metadata.py",
+                      "test/test_decoders.py",
+                  ]
+                  pytest_extra_args += ["--durations=50"]
+            - if: target_platform == "osx-64"
+              then:
+                # osx-64 (macOS on Intel) is not explicitly supported by torchcodec, see
+                # https://github.com/conda-forge/torchcodec-feedstock/pull/11
+                # and https://github.com/conda-forge/torchcodec-feedstock/pull/38#issuecomment-3456998748
+                # As long as the vast majority of tests pass, skip the few tests that do not pass.
+                - |
+                  test_paths = ["test"]
+                  pytest_extra_args = []
+                  tests_to_skip += [
+                      "test/test_encoders.py",
+                      "test/test_ops.py::TestVideoEncoderOps::test_against_to_file",
+                      "test/test_ops.py::TestVideoEncoderOps::test_video_encoder_round_trip",
+                      "test/test_ops.py::TestVideoDecoderOps::test_throws_exception_at_eof[cpu]",
+                      "test/test_ops.py::TestVideoDecoderOps::test_throws_exception_if_seek_too_far[cpu]",
+                      "test/test_ops.py::TestAudioDecoderOps::test_next[asset0]",
+                      "test/test_ops.py::TestAudioDecoderOps::test_next[asset1]",
+                      "test/test_transform_ops.py::TestPublicVideoDecoderTransformOps",
+                  ]
+            - if: osx
+              then:
+                # test_third_party_interface is not supported upstream on macOS.
+                - tests_to_skip += ["test/third-party-interface/test_third_party_interface.py"]
+            - if: win
+              then:
+                # test_third_party_interface is not supported upstream on Windows.
+                - |
+                  tests_to_skip += [
+                      "test/third-party-interface/test_third_party_interface.py",
+                      "test/test_encoders.py::TestAudioEncoder::test_against_cli",
+                      "test/test_encoders.py::TestVideoEncoder::test_video_encoder_against_ffmpeg_cli",
+                  ]
+            - |
+              pytest_args = ["pytest", "-v"] + pytest_extra_args
+              for test in tests_to_skip:
+                  pytest_args.extend(["--deselect", test])
+              pytest_args.extend(test_paths)
+
+              print(f"running with args: {pytest_args}")
+              sys.exit(subprocess.call(pytest_args))
 
 about:
   homepage: https://github.com/meta-pytorch/torchcodec

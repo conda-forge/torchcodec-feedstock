@@ -1,5 +1,3 @@
-azure:
-  free_disk_space: true
 provider:
   linux_aarch64: default
   osx_arm64: default
@@ -15,3 +13,5 @@ test: native_and_emulated
 bot:
   version_updates:
     allowed_tag_globs: "v*"
+workflow_settings:
+  free_disk_space: max
