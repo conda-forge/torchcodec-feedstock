@@ -76,9 +76,16 @@ outputs:
         # ffmpeg. At runtime the user can install either lgpl or gpl ffmpeg as preferred
         - ffmpeg * [build=lgpl_*]
         - libtorch
-        - libtorch * [build=${{ torch_proc_type }}*]
         - pytorch
-        - pytorch * [build=${{ torch_proc_type }}*]
+        # We temporary relatex the pytorch dependency on to be compatible with torchvision,
+        # see https://github.com/conda-forge/torchcodec-feedstock/pull/69#issuecomment-4751807811
+        - if: cuda_compiler_version == "12.9" and win
+          then:
+            - libtorch * [build=cuda12*]
+            - pytorch * [build=cuda12*]
+          else:
+            - libtorch * [build=${{ torch_proc_type }}*]
+            - pytorch * [build=${{ torch_proc_type }}*]
         - pybind11
         - if: cuda_compiler_version != "None"
           then:
@@ -104,7 +111,13 @@ outputs:
             - libnpp-dev
       run:
         - python
-        - pytorch * [build=${{ torch_proc_type }}*]
+        # We temporary relatex the pytorch dependency on to be compatible with torchvision,
+        # see https://github.com/conda-forge/torchcodec-feedstock/pull/69#issuecomment-4751807811
+        - if: cuda_compiler_version == "12.9" and win
+          then:
+            - pytorch * [build=cuda12*]
+          else:
+            - pytorch * [build=${{ torch_proc_type }}*]
 
     tests:
       - python:
