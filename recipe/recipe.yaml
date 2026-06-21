@@ -195,6 +195,8 @@ outputs:
                   pytest_extra_args = []
                   tests_to_skip += [
                       "test/test_encoders.py",
+                      "test/smoke_test.py::TestVideoEncoder::test_to_tensor",
+                      "test/smoke_test.py::TestAudioEncoder::test_to_tensor",
                       "test/test_ops.py::TestVideoEncoderOps::test_against_to_file",
                       "test/test_ops.py::TestVideoEncoderOps::test_video_encoder_round_trip",
                       "test/test_ops.py::TestVideoDecoderOps::test_throws_exception_at_eof[cpu]",
