@@ -37,321 +37,384 @@ description = "List contents of all packages found in rattler-build build direct
 [feature.build.tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build torchcodec-feedstock directly (without setup scripts), no particular variant specified"
-[feature.build.tasks."build-linux_64_cuda_compiler_version12.9python3.10.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version12.9python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_version12.9python3.10.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version12.9python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_version12.9python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.10.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_version12.9python3.10.____cpython"
-[feature.build.tasks."build-linux_64_cuda_compiler_version12.9python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version12.9python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_version12.9python3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version12.9python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_version12.9python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.11.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_version12.9python3.11.____cpython"
-[feature.build.tasks."build-linux_64_cuda_compiler_version12.9python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version12.9python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_version12.9python3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version12.9python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_version12.9python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.12.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_version12.9python3.12.____cpython"
-[feature.build.tasks."build-linux_64_cuda_compiler_version12.9python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version12.9python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_version12.9python3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version12.9python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_version12.9python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.13.____cp313.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_version12.9python3.13.____cp313"
-[feature.build.tasks."build-linux_64_cuda_compiler_version12.9python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version12.9python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_version12.9python3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version12.9python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_version12.9python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_version12.9python3.14.____cp314.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_version12.9python3.14.____cp314"
-[feature.build.tasks."build-linux_64_cuda_compiler_version13.0python3.10.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version13.0python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_version13.0python3.10.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version13.0python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_version13.0python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.10.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_version13.0python3.10.____cpython"
-[feature.build.tasks."build-linux_64_cuda_compiler_version13.0python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version13.0python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_version13.0python3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version13.0python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_version13.0python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.11.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_version13.0python3.11.____cpython"
-[feature.build.tasks."build-linux_64_cuda_compiler_version13.0python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version13.0python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_version13.0python3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version13.0python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_version13.0python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.12.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_version13.0python3.12.____cpython"
-[feature.build.tasks."build-linux_64_cuda_compiler_version13.0python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version13.0python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_version13.0python3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version13.0python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_version13.0python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.13.____cp313.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_version13.0python3.13.____cp313"
-[feature.build.tasks."build-linux_64_cuda_compiler_version13.0python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version13.0python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_version13.0python3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_version13.0python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_version13.0python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_version13.0python3.14.____cp314.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_version13.0python3.14.____cp314"
-[feature.build.tasks."build-linux_64_cuda_compiler_versionNonepython3.10.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_versionNonepython3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_versionNonepython3.10.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_versionNonepython3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_versionNonepython3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.10.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_versionNonepython3.10.____cpython"
-[feature.build.tasks."build-linux_64_cuda_compiler_versionNonepython3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_versionNonepython3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_versionNonepython3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_versionNonepython3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_versionNonepython3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.11.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_versionNonepython3.11.____cpython"
-[feature.build.tasks."build-linux_64_cuda_compiler_versionNonepython3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_versionNonepython3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_versionNonepython3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_versionNonepython3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_versionNonepython3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.12.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_versionNonepython3.12.____cpython"
-[feature.build.tasks."build-linux_64_cuda_compiler_versionNonepython3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_versionNonepython3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_versionNonepython3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_versionNonepython3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_versionNonepython3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.13.____cp313.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_versionNonepython3.13.____cp313"
-[feature.build.tasks."build-linux_64_cuda_compiler_versionNonepython3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_versionNonepython3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_cuda_compiler_versionNonepython3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_64_cuda_compiler_versionNonepython3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_cuda_compiler_versionNonepython3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cuda_compiler_versionNonepython3.14.____cp314.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_64_cuda_compiler_versionNonepython3.14.____cp314"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.10.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.10.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.10.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.10.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.11.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.11.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.12.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.12.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.13.____cp313.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.13.____cp313"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.14.____cp314.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_version12.9python3.14.____cp314"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.10.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.10.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.10.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.10.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.11.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.11.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.12.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.12.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.13.____cp313.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.13.____cp313"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.14.____cp314.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_version13.0python3.14.____cp314"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.10.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.10.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.10.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.10.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.11.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.11.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.12.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.12.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.13.____cp313.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.13.____cp313"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.14.____cp314.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsacuda_compiler_versionNonepython3.14.____cp314"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.10.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.10.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.10.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.10.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.10.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.11.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.11.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.11.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.11.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.11.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.11.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.11.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.12.____cpython"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.12.____cpython"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.12.____cpython.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.12.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.12.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.12.____cpython.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.12.____cpython"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.13.____cp313"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.13.____cp313"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.13.____cp313.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.13.____cp313 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.13.____cp313"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.13.____cp313.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.13.____cp313"
-[feature.build.tasks."build-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.14.____cp314"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.14.____cp314"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.14.____cp314.yaml"
-description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.14.____cp314 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.14.____cp314"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.14.____cp314.yaml"
-description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typetegracuda_compiler_version12.9python3.14.____cp314"
+[feature.build.tasks."build-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"
+[feature.build.tasks."build-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"
+[feature.build.tasks."build-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"
+[feature.build.tasks."build-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"
+[feature.build.tasks."build-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"
+[feature.build.tasks."build-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314"
+[feature.build.tasks."build-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314t"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.11.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.12.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.13.____cp313"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.14.____cp314t"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.12.____cpython"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.13.____cp313"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314"
+[feature.build.tasks."build-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.14.____cp314t"
 [feature.build.tasks."build-osx_64_python3.10.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.10.____cpython.yaml"
 description = "Build torchcodec-feedstock with variant osx_64_python3.10.____cpython directly (without setup scripts)"
@@ -397,6 +460,15 @@ description = "Build torchcodec-feedstock with variant osx_64_python3.14.____cp3
 [feature.build.tasks."inspect-osx_64_python3.14.____cp314"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.14.____cp314.yaml"
 description = "List contents of torchcodec-feedstock packages built for variant osx_64_python3.14.____cp314"
+[feature.build.tasks."build-osx_64_python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant osx_64_python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_python3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant osx_64_python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant osx_64_python3.14.____cp314t"
 [feature.build.tasks."build-osx_arm64_python3.10.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.10.____cpython.yaml"
 description = "Build torchcodec-feedstock with variant osx_arm64_python3.10.____cpython directly (without setup scripts)"
@@ -442,6 +514,15 @@ description = "Build torchcodec-feedstock with variant osx_arm64_python3.14.____
 [feature.build.tasks."inspect-osx_arm64_python3.14.____cp314"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml"
 description = "List contents of torchcodec-feedstock packages built for variant osx_arm64_python3.14.____cp314"
+[feature.build.tasks."build-osx_arm64_python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant osx_arm64_python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_python3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant osx_arm64_python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant osx_arm64_python3.14.____cp314t"
 [feature.build.tasks."build-win_64_cuda_compiler_version12.8python3.10.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_cuda_compiler_version12.8python3.10.____cpython.yaml"
 description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_version12.8python3.10.____cpython directly (without setup scripts)"
@@ -487,6 +568,15 @@ description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_vers
 [feature.build.tasks."inspect-win_64_cuda_compiler_version12.8python3.14.____cp314"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_cuda_compiler_version12.8python3.14.____cp314.yaml"
 description = "List contents of torchcodec-feedstock packages built for variant win_64_cuda_compiler_version12.8python3.14.____cp314"
+[feature.build.tasks."build-win_64_cuda_compiler_version12.8python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_cuda_compiler_version12.8python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_version12.8python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-win_64_cuda_compiler_version12.8python3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_cuda_compiler_version12.8python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_version12.8python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-win_64_cuda_compiler_version12.8python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_cuda_compiler_version12.8python3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant win_64_cuda_compiler_version12.8python3.14.____cp314t"
 [feature.build.tasks."build-win_64_cuda_compiler_version13.0python3.10.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_cuda_compiler_version13.0python3.10.____cpython.yaml"
 description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_version13.0python3.10.____cpython directly (without setup scripts)"
@@ -532,6 +622,15 @@ description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_vers
 [feature.build.tasks."inspect-win_64_cuda_compiler_version13.0python3.14.____cp314"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_cuda_compiler_version13.0python3.14.____cp314.yaml"
 description = "List contents of torchcodec-feedstock packages built for variant win_64_cuda_compiler_version13.0python3.14.____cp314"
+[feature.build.tasks."build-win_64_cuda_compiler_version13.0python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_cuda_compiler_version13.0python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_version13.0python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-win_64_cuda_compiler_version13.0python3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_cuda_compiler_version13.0python3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_version13.0python3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-win_64_cuda_compiler_version13.0python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_cuda_compiler_version13.0python3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant win_64_cuda_compiler_version13.0python3.14.____cp314t"
 [feature.build.tasks."build-win_64_cuda_compiler_versionNonepython3.10.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_cuda_compiler_versionNonepython3.10.____cpython.yaml"
 description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_versionNonepython3.10.____cpython directly (without setup scripts)"
@@ -577,6 +676,15 @@ description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_vers
 [feature.build.tasks."inspect-win_64_cuda_compiler_versionNonepython3.14.____cp314"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_cuda_compiler_versionNonepython3.14.____cp314.yaml"
 description = "List contents of torchcodec-feedstock packages built for variant win_64_cuda_compiler_versionNonepython3.14.____cp314"
+[feature.build.tasks."build-win_64_cuda_compiler_versionNonepython3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_cuda_compiler_versionNonepython3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_versionNonepython3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."debug-win_64_cuda_compiler_versionNonepython3.14.____cp314t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_cuda_compiler_versionNonepython3.14.____cp314t.yaml"
+description = "Build torchcodec-feedstock with variant win_64_cuda_compiler_versionNonepython3.14.____cp314t directly (without setup scripts)"
+[feature.build.tasks."inspect-win_64_cuda_compiler_versionNonepython3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_cuda_compiler_versionNonepython3.14.____cp314t.yaml"
+description = "List contents of torchcodec-feedstock packages built for variant win_64_cuda_compiler_versionNonepython3.14.____cp314t"
 
 [environments]
 build = ["build"]
