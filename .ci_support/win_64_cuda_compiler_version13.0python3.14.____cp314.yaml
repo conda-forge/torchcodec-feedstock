@@ -15,7 +15,7 @@ cxx_compiler:
 ffmpeg:
 - '9'
 giflib:
-- '5.2'
+- '6'
 libavif:
 - '1'
 libjpeg_turbo:

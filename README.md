@@ -278,5 +278,6 @@ Feedstock Maintainers
 =====================
 
 * [@Dan-Flores](https://github.com/Dan-Flores/)
+* [@ruben-arts](https://github.com/ruben-arts/)
 * [@traversaro](https://github.com/traversaro/)
 
