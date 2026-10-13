@@ -22,18 +22,6 @@ jobs:
       max-parallel: 50
       matrix:
         include:
-          - CONFIG: linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
-            UPLOAD_PACKAGES: True
-            build_workspace_dir: build_artifacts
-            docker_run_args: 
-            free_disk_space: max
-            os: ubuntu
-            pagefile_size: 0
-            resize_partitions: False
-            runs_on: ['ubuntu-latest']
-            tools_install_dir: ~/miniforge3
           - CONFIG: linux_64_c_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
@@ -82,7 +70,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython
+          - CONFIG: linux_64_c_compiler_version15cuda_compiler_version13.4cxx_compiler_version15python3.11.____cpython
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -94,7 +82,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython
+          - CONFIG: linux_64_c_compiler_version15cuda_compiler_version13.4cxx_compiler_version15python3.12.____cpython
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -106,7 +94,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython
+          - CONFIG: linux_64_c_compiler_version15cuda_compiler_version13.4cxx_compiler_version15python3.13.____cp313
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -118,31 +106,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
-            UPLOAD_PACKAGES: True
-            build_workspace_dir: build_artifacts
-            docker_run_args: 
-            free_disk_space: max
-            os: ubuntu
-            pagefile_size: 0
-            resize_partitions: False
-            runs_on: ['ubuntu-latest']
-            tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_c_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
-            STORE_BUILD_ARTIFACTS: False
-            UPLOAD_PACKAGES: True
-            build_workspace_dir: build_artifacts
-            docker_run_args: 
-            free_disk_space: max
-            os: ubuntu
-            pagefile_size: 0
-            resize_partitions: False
-            runs_on: ['ubuntu-latest']
-            tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_c_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython
+          - CONFIG: linux_64_c_compiler_version15cuda_compiler_version13.4cxx_compiler_version15python3.14.____cp314
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -202,18 +166,6 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
-            UPLOAD_PACKAGES: True
-            build_workspace_dir: build_artifacts
-            docker_run_args: 
-            free_disk_space: max
-            os: ubuntu
-            pagefile_size: 0
-            resize_partitions: False
-            runs_on: ['ubuntu-24.04-arm']
-            tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
@@ -262,7 +214,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.10.____cpython
+          - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.4cxx_compiler_version15python3.11.____cpython
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -274,7 +226,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.11.____cpython
+          - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.4cxx_compiler_version15python3.12.____cpython
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -286,7 +238,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.12.____cpython
+          - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.4cxx_compiler_version15python3.13.____cp313
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -298,31 +250,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.13.____cp313
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
-            UPLOAD_PACKAGES: True
-            build_workspace_dir: build_artifacts
-            docker_run_args: 
-            free_disk_space: max
-            os: ubuntu
-            pagefile_size: 0
-            resize_partitions: False
-            runs_on: ['ubuntu-24.04-arm']
-            tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.0cxx_compiler_version15python3.14.____cp314
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
-            UPLOAD_PACKAGES: True
-            build_workspace_dir: build_artifacts
-            docker_run_args: 
-            free_disk_space: max
-            os: ubuntu
-            pagefile_size: 0
-            resize_partitions: False
-            runs_on: ['ubuntu-24.04-arm']
-            tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_versionNonecxx_compiler_version15python3.10.____cpython
+          - CONFIG: linux_aarch64_arm_variant_typesbsac_compiler_version15cuda_compiler_version13.4cxx_compiler_version15python3.14.____cp314
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -382,18 +310,6 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.10.____cpython
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
-            STORE_BUILD_ARTIFACTS: False
-            UPLOAD_PACKAGES: True
-            build_workspace_dir: build_artifacts
-            docker_run_args: 
-            free_disk_space: max
-            os: ubuntu
-            pagefile_size: 0
-            resize_partitions: False
-            runs_on: ['ubuntu-24.04-arm']
-            tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_arm_variant_typetegrac_compiler_version14cuda_compiler_version12.9cxx_compiler_version14python3.11.____cpython
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
@@ -442,18 +358,6 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: win_64_cuda_compiler_version12.8python3.10.____cpython
-            STORE_BUILD_ARTIFACTS: False
-            UPLOAD_PACKAGES: True
-            build_platform: win-64
-            build_workspace_dir: D:\\bld\\
-            docker_run_args: 
-            free_disk_space: max
-            os: windows
-            pagefile_size: 0
-            resize_partitions: False
-            runs_on: ['windows-2022']
-            tools_install_dir: D:\Miniforge
           - CONFIG: win_64_cuda_compiler_version12.8python3.11.____cpython
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -502,7 +406,7 @@ jobs:
             resize_partitions: False
             runs_on: ['windows-2022']
             tools_install_dir: D:\Miniforge
-          - CONFIG: win_64_cuda_compiler_version13.0python3.10.____cpython
+          - CONFIG: win_64_cuda_compiler_version13.4python3.11.____cpython
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
             build_platform: win-64
@@ -514,7 +418,7 @@ jobs:
             resize_partitions: False
             runs_on: ['windows-2022']
             tools_install_dir: D:\Miniforge
-          - CONFIG: win_64_cuda_compiler_version13.0python3.11.____cpython
+          - CONFIG: win_64_cuda_compiler_version13.4python3.12.____cpython
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
             build_platform: win-64
@@ -526,7 +430,7 @@ jobs:
             resize_partitions: False
             runs_on: ['windows-2022']
             tools_install_dir: D:\Miniforge
-          - CONFIG: win_64_cuda_compiler_version13.0python3.12.____cpython
+          - CONFIG: win_64_cuda_compiler_version13.4python3.13.____cp313
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
             build_platform: win-64
@@ -538,31 +442,7 @@ jobs:
             resize_partitions: False
             runs_on: ['windows-2022']
             tools_install_dir: D:\Miniforge
-          - CONFIG: win_64_cuda_compiler_version13.0python3.13.____cp313
-            STORE_BUILD_ARTIFACTS: False
-            UPLOAD_PACKAGES: True
-            build_platform: win-64
-            build_workspace_dir: D:\\bld\\
-            docker_run_args: 
-            free_disk_space: max
-            os: windows
-            pagefile_size: 0
-            resize_partitions: False
-            runs_on: ['windows-2022']
-            tools_install_dir: D:\Miniforge
-          - CONFIG: win_64_cuda_compiler_version13.0python3.14.____cp314
-            STORE_BUILD_ARTIFACTS: False
-            UPLOAD_PACKAGES: True
-            build_platform: win-64
-            build_workspace_dir: D:\\bld\\
-            docker_run_args: 
-            free_disk_space: max
-            os: windows
-            pagefile_size: 0
-            resize_partitions: False
-            runs_on: ['windows-2022']
-            tools_install_dir: D:\Miniforge
-          - CONFIG: win_64_cuda_compiler_versionNonepython3.10.____cpython
+          - CONFIG: win_64_cuda_compiler_version13.4python3.14.____cp314
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
             build_platform: win-64
