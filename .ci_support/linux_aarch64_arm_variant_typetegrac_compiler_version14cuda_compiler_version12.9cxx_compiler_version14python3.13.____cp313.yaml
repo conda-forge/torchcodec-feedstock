@@ -1,3 +1,5 @@
+DOCKER_PLATFORM:
+- linux/aarch64
 arm_variant_type:
 - tegra
 c_compiler:
@@ -35,7 +37,7 @@ libmagma_devel:
 libpng:
 - '1.6'
 libtorch:
-- '2.13'
+- '2.14'
 libwebp_base:
 - '1'
 nccl:
@@ -47,7 +49,7 @@ pin_run_as_build:
 python:
 - 3.13.* *_cp313
 pytorch:
-- '2.13'
+- '2.14'
 target_platform:
 - linux-aarch64
 zip_keys:

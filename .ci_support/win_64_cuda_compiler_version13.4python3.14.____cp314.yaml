@@ -25,7 +25,7 @@ libmagma_devel:
 libpng:
 - '1.6'
 libtorch:
-- '2.13'
+- '2.14'
 libwebp_base:
 - '1'
 pin_run_as_build:
@@ -35,7 +35,7 @@ pin_run_as_build:
 python:
 - 3.14.* *_cp314
 pytorch:
-- '2.13'
+- '2.14'
 target_platform:
 - win-64
 zlib:
